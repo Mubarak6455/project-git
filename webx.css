@@ -1,0 +1,124 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial sans-serif;
+    background-color: #ddd;
+}
+
+header img{
+    float: left;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+header h1{
+    text-align: center;
+    color:  rgb(20, 230, 100);;
+    font-style: italic;
+}
+
+.navbar{
+    background-color: rgb(20, 230, 100);
+    overflow: hidden;
+}
+
+.navbar a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a.icon{
+    display: none;
+}
+
+.note{
+    text-align: center;
+    font-size: 17px;
+}
+
+.slider-container{
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider{
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider img{
+    max-width: 100%;
+    display: block;
+
+}
+
+.slider-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0.5;
+}
+
+.prev{
+    left: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.next{
+    right: 10px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: green;
+}
+
+.Container{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    text-align: center;
+    /* margin: 40px; */
+}
+
+.pic1, .pic2, .pic3{
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0px 0px 0px 0px (0, 0, 0 , 0.1);
+}
+
+@media screen and (max-width: 600px){
+    .navbar a:not(:first-child) {display:none}
+    .navbar a.icon{
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .navbar.responsive {position: relative;}
+    .navbar.responsive.icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .navbar a.responsive {
+        float: none;
+        display: block;
+        text-align: left;
+
+    }
+}
